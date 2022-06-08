@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--====== Required meta tags ======-->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--====== Title ======-->
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href= "{{ url_for('static',filename='assets/images/favicon.ico') }}" type="image/svg">
+
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/bootstrap.min.css') }}">
+
+
+  <!--====== Line Icons css ======-->
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/lineicons.css') }}">
+
+  <!--====== Style css ======-->
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/scss/starter.css') }}">
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/scss/navbars/navbar-01.css') }}">
+  {% block style %} {% endblock %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/footers/footer-08.css') }}" />
+</head>
+
+<body>
+  {% include 'navbar.html'%}
+  <!--====== PART START ======-->
+  {% block content %} {% endblock %}
+  <!--====== PART ENDS ======-->
+
+  <!--====== Bootstrap js ======-->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  {% block scripts %} {% endblock %}
+  {% include 'footer.html'%}
+</body>
+
+</html>

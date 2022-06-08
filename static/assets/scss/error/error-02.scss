@@ -1,0 +1,37 @@
+@import "../variables";
+@import "../mixin";
+
+/*===== ERROR TWO Style =====*/
+
+.error-two {
+  height: 750px;
+  background-color: var(--light-1);
+
+  @media #{$md} {
+    height: 550px;
+  }
+  @media #{$xs} {
+    height: 450px;
+  }
+}
+
+.error-content {
+  & img {
+    @media #{$md} {
+      width: 450px;
+    }
+    @media #{$sm} {
+      width: 350px;
+    }
+  }
+
+  & .text {
+    text-transform: uppercase;
+    margin-top: 55px;
+    color: var(--dark-3);
+
+    & span {
+      color: var(--primary);
+    }
+  }
+}

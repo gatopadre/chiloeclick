@@ -1,0 +1,36 @@
+/*===== ERROR TWO Style =====*/
+.error-two {
+  height: 750px;
+  background-color: var(--light-1);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .error-two {
+    height: 550px;
+  }
+}
+@media (max-width: 767px) {
+  .error-two {
+    height: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .error-content img {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .error-content img {
+    width: 350px;
+  }
+}
+.error-content .text {
+  text-transform: uppercase;
+  margin-top: 55px;
+  color: var(--dark-3);
+}
+.error-content .text span {
+  color: var(--primary);
+}
+
+/*# sourceMappingURL=error-02.css.map */
