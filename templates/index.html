@@ -2,6 +2,9 @@
 
 {% block style %}
 <link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/headers/header-03.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/contact/contact-06.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/call-to-action/call-to-action-03.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/features/feature-06.css') }}" />
 {% endblock %}
 
 {% block content %}
@@ -13,6 +16,9 @@
   <!-- header content area -->
 </section>
 <!--====== HEADER THREE PART ENDS ======-->
+{% include 'catalog.html'%}
+{% include 'recommendations.html'%}
+{% include 'contact.html'%}
 {% endblock %}
 
 {% block script %}
