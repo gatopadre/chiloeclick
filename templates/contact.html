@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static',filename='assets/scss/contact/contact-06.css') }}" />
+{% endblock %}
+
+{% block content %}
 <!-- Start Contact Area -->
 <section id="contact" class="contact-us">
     <div class="container">
@@ -58,3 +65,7 @@
     </div>
 </section>
 <!--/ End Contact Area -->
+{% endblock %}
+
+{% block script %}
+{% endblock %}
