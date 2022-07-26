@@ -9,4 +9,10 @@ gcloud compute instances create server-ubuntu --project=servidor-principal-35270
 
 ## costos
 google cloud: 8 usd mes
-maphub 
+maphub:
+
+## TODOs:
+- Logo completo Chiloeclik
+- BD para almacenar mensajes.
+- Correo receptor de los mensajes.
+- Logica para el envio de los mensajes del formulario de contacto.

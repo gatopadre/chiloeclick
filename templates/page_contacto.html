@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-12">
                         <div class="form-main">
-                            <form class="form" method="post" action="#">
+                            <form id="formulario-contacto" class="form" method="post" action="#">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-12">
                                         <div class="form-group">
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group light-rounded-buttons">
-                                            <button type="submit" class="btn primary-btn">
+                                            <button type="submit" id="enviar-contacto" class="btn primary-btn">
                                                 Enviar Mensaje
                                             </button>
                                         </div>
@@ -67,5 +67,24 @@
 <!--/ End Contact Area -->
 {% endblock %}
 
-{% block script %}
+{% block scripts %}
+<script type="text/javascript">
+
+$('#enviar-contacto').on('click', function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: '{{url_for("contacto")}}' + '/enviar',
+        contentType: 'application/json',
+        // data: JSON.stringify(formulario.serializeArray()),
+        data: $('#formulario-contacto').serialize(),
+        dataType: 'html',
+        success: function(response) {
+            console.log(response);
+        }
+    });
+    return true;
+})
+
+</script>
 {% endblock %}
